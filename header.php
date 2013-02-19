@@ -30,13 +30,15 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
+	</header><!-- #masthead .site-header -->
 
+	<div id="main" class="site-main">
 		<nav role="navigation" class="site-navigation main-navigation">
 			<h1 class="assistive-text"><?php _e( 'Menu', 'heisenberg' ); ?></h1>
 			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'heisenberg' ); ?>"><?php _e( 'Skip to content', 'heisenberg' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- .site-navigation .main-navigation -->
-	</header><!-- #masthead .site-header -->
-
-	<div id="main" class="site-main">
+		
+		<section id="primary" class="content-area">
+			<div id="content" class="site-content" role="main">
