@@ -173,3 +173,37 @@ function heisenberg_category_transient_flusher() {
 }
 add_action( 'edit_category', 'heisenberg_category_transient_flusher' );
 add_action( 'save_post', 'heisenberg_category_transient_flusher' );
+
+/**
+ * Returns a "Continue Reading" link for excerpts
+ */
+if ( ! function_exists( 'heisenberg_continue_reading_link' ) ) :
+function heisenberg_continue_reading_link() {
+	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'heisenberg' ) . '</a>';
+}
+endif; // heisenberg_continue_reading_link
+
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and heisenberg_continue_reading_link().
+ *
+ * To override this in a child theme, remove the filter and add your own
+ * function tied to the excerpt_more filter hook.
+ */
+function heisenberg_auto_excerpt_more( $more ) {
+	return ' &hellip;' . heisenberg_continue_reading_link();
+}
+add_filter( 'excerpt_more', 'heisenberg_auto_excerpt_more' );
+
+/**
+ * Adds a pretty "Continue Reading" link to custom post excerpts.
+ *
+ * To override this link in a child theme, remove the filter and add your own
+ * function tied to the get_the_excerpt filter hook.
+ */
+function heisenberg_custom_excerpt_more( $output ) {
+	if ( has_excerpt() && ! is_attachment() ) {
+		$output .= heisenberg_continue_reading_link();
+	}
+	return $output;
+}
+add_filter( 'get_the_excerpt', 'heisenberg_custom_excerpt_more' );
