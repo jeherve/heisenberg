@@ -176,6 +176,8 @@ add_action( 'save_post', 'heisenberg_category_transient_flusher' );
 
 /**
  * Returns a "Continue Reading" link for excerpts
+ *
+ * @since Heisenberg 1.0
  */
 if ( ! function_exists( 'heisenberg_continue_reading_link' ) ) :
 function heisenberg_continue_reading_link() {
@@ -188,6 +190,8 @@ endif; // heisenberg_continue_reading_link
  *
  * To override this in a child theme, remove the filter and add your own
  * function tied to the excerpt_more filter hook.
+ *
+ * @since Heisenberg 1.0
  */
 function heisenberg_auto_excerpt_more( $more ) {
 	return ' &hellip;' . heisenberg_continue_reading_link();
@@ -199,6 +203,8 @@ add_filter( 'excerpt_more', 'heisenberg_auto_excerpt_more' );
  *
  * To override this link in a child theme, remove the filter and add your own
  * function tied to the get_the_excerpt filter hook.
+ *
+ * @since Heisenberg 1.0
  */
 function heisenberg_custom_excerpt_more( $output ) {
 	if ( has_excerpt() && ! is_attachment() ) {
@@ -210,6 +216,8 @@ add_filter( 'get_the_excerpt', 'heisenberg_custom_excerpt_more' );
 
 /**
  * Count the number of footer sidebars to enable dynamic classes for the footer
+ *
+ * @since Heisenberg 1.0
  */
 function heisenberg_footer_sidebar_class() {
 	$count = 0;
@@ -239,7 +247,7 @@ function heisenberg_footer_sidebar_class() {
 
 	if ( $class )
 		echo 'class="' . $class . '"';
-}}
+}
 
 if ( ! function_exists( 'heisenberg_get_first_url' ) ) :
 /**
