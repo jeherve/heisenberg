@@ -78,6 +78,7 @@ function heisenberg_setup() {
 	 */
 	add_theme_support( 'custom-background', array(
 		'default-color' => 'FDFFD7',
+		'default-image' => get_template_directory_uri() . '/img/default-bg.png'
 	) );
 
 	/**
