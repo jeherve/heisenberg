@@ -23,8 +23,6 @@
 		<div class="site-info">
 			<?php do_action( 'heisenberg_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'heisenberg' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'heisenberg' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'heisenberg' ), 'Heisenberg', '<a href="http://jeremyherve.com/" rel="designer">Jeremy Herve</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
