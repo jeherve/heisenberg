@@ -14,8 +14,6 @@ get_header(); ?>
 					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'heisenberg' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<?php heisenberg_content_nav( 'nav-above' ); ?>
-
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 

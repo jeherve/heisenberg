@@ -10,8 +10,6 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php heisenberg_content_nav( 'nav-above' ); ?>
-
 				<?php get_template_part( 'content', 'single' ); ?>
 
 				<?php heisenberg_content_nav( 'nav-below' ); ?>

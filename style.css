@@ -614,7 +614,7 @@ object {
 ----------------------------------------------- */
 
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll #nav-above, /* Older / Newer Posts Navigation (always hidden) */
+/* Older / Newer Posts Navigation (always hidden) */
 .infinite-scroll #nav-below,
 .infinite-scroll.neverending #colophon { /* Theme Footer (when set to scrolling) */
 	display: none;
