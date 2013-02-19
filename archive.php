@@ -84,8 +84,9 @@ get_header(); ?>
 				<?php get_template_part( 'no-results', 'archive' ); ?>
 
 			<?php endif; ?>
-
+			</div>
 			</div><!-- #content .site-content -->
 		</section><!-- #primary .content-area -->
+		
 
 <?php get_footer(); ?>
