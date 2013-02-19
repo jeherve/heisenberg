@@ -73,6 +73,13 @@ function heisenberg_setup() {
 		'primary' => __( 'Primary Menu', 'heisenberg' ),
 		'footer' => __( 'Footer Menu', 'heisenberg' ),
 	) );
+	
+	/**
+	 * Enable support for Custom Backgrounds
+	 */
+	add_theme_support( 'custom-background', array(
+		'default-color' => 'FDFFD7',
+	) );
 
 	/**
 	 * Enable support for Post Formats
@@ -81,37 +88,6 @@ function heisenberg_setup() {
 }
 endif; // heisenberg_setup
 add_action( 'after_setup_theme', 'heisenberg_setup' );
-
-/**
- * Setup the WordPress core custom background feature.
- *
- * Use add_theme_support to register support for WordPress 3.4+
- * as well as provide backward compatibility for WordPress 3.3
- * using feature detection of wp_get_theme() which was introduced
- * in WordPress 3.4.
- *
- * @todo Remove the 3.3 support when WordPress 3.6 is released.
- *
- * Hooks into the after_setup_theme action.
- */
-function heisenberg_register_custom_background() {
-	$args = array(
-		'default-color' => 'FDFFD7',
-		'default-image' => '',
-	);
-
-	$args = apply_filters( 'heisenberg_custom_background_args', $args );
-
-	if ( function_exists( 'wp_get_theme' ) ) {
-		add_theme_support( 'custom-background', $args );
-	} else {
-		define( 'BACKGROUND_COLOR', $args['default-color'] );
-		if ( ! empty( $args['default-image'] ) )
-			define( 'BACKGROUND_IMAGE', $args['default-image'] );
-		add_custom_background();
-	}
-}
-add_action( 'after_setup_theme', 'heisenberg_register_custom_background' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
@@ -137,6 +113,7 @@ function heisenberg_widgets_init() {
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
+	) );
 
 	register_sidebar( array(
 		'name' => __( 'Footer Area Three', 'heisenberg' ),
