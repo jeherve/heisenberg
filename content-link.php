@@ -10,10 +10,6 @@
 		<h1 class="entry-title">
 			<a href="<?php echo esc_url( heisenberg_get_first_url() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 		</h1>
-
-		<div class="entry-meta">
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'heisenberg' ), __( '1 Comment', 'heisenberg' ), __( '% Comments', 'heisenberg' ) ); ?></span>
-		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -21,6 +17,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
+		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'heisenberg' ), __( '1 Comment', 'heisenberg' ), __( '% Comments', 'heisenberg' ) ); ?></span>
+		<span class="sep"> | </span>
 		<?php heisenberg_posted_on(); ?>
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
