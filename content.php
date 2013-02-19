@@ -26,6 +26,7 @@
 
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'heisenberg' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
