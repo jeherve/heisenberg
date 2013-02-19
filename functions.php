@@ -64,7 +64,7 @@ function heisenberg_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	
-	set_post_thumbnail_size( 760, 250, true ); // 760*250, hard crop mode
+	set_post_thumbnail_size( 760, 9999 ); // 760px high, the height doesn't matter
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
