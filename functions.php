@@ -63,6 +63,8 @@ function heisenberg_setup() {
 	 * Enable support for Post Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	
+	set_post_thumbnail_size( 760, 250, true ); // 760*250, hard crop mode
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -132,6 +134,9 @@ add_action( 'widgets_init', 'heisenberg_widgets_init' );
  */
 function heisenberg_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	
+	$protocol = is_ssl() ? 'https' : 'http';
+	wp_enqueue_style( 'googlefonts', "$protocol://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Merriweather:400,300,700" );
 
 	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 

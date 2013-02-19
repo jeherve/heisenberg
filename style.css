@@ -101,7 +101,7 @@ select,
 textarea {
 	background: #FDFFD7;
 	color: #272D01;
-	font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1.8rem;
 	line-height: 1.7;
@@ -116,6 +116,14 @@ textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+}
+h1 {
+	font-size: 2.8rem;
+}
+h2 {
+	font-size: 2.3rem;
 }
 hr {
 	background-color: #272D01;
@@ -315,6 +323,7 @@ textarea {
 /* Links */
 a {
 	color: #069C79;
+	text-decoration: none;
 }
 a:hover,
 a:focus,
@@ -426,13 +435,31 @@ a:visited {
 /* =Content
 ----------------------------------------------- */
 
+.entry-header {
+	position: relative;
+	width: 100%;
+}
+.entry-header h1 {
+    bottom: 50px;
+    left: 20px;
+    position: absolute;
+}
+.entry-header h1 a {
+	color: #fff;
+	text-shadow: 0px 0px 10px #000;
+}
+
 .sticky {
 }
 .hentry {
+	border-top: 1px solid #272D01;
 	margin: 0 0 1.5em;
+	padding: 1.5rem 0 0;
 }
 .entry-meta {
 	clear: both;
+	font-size: 1.3rem;
+	margin-left: 20px;
 }
 .byline {
 	display: none;
@@ -443,7 +470,7 @@ a:visited {
 }
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1rem 2rem;
 }
 .page-links {
 	clear: both;
