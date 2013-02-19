@@ -7,11 +7,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) :
-			the_post_thumbnail();
-		else : ?>
-			<img src="<?php bloginfo( 'template_directory' ); ?>/img/default-thumb.png" />
-		<?php endif; ?>
+		<div class="entry-image">
+			<?php if ( has_post_thumbnail() ) :
+				the_post_thumbnail();
+			else : ?>
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/default-thumb.png" />
+			<?php endif; ?>
+		</div>
 		
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'heisenberg' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
