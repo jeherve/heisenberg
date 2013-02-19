@@ -119,12 +119,32 @@ add_action( 'after_setup_theme', 'heisenberg_register_custom_background' );
  */
 function heisenberg_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'heisenberg' ),
+		'name' => __( 'Footer Area One', 'heisenberg' ),
 		'id' => 'sidebar-1',
+		'description' => __( 'An optional widget area for your site footer', 'heisenberg' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Footer Area Two', 'heisenberg' ),
+		'id' => 'sidebar-2',
+		'description' => __( 'An optional widget area for your site footer', 'heisenberg' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+
+	register_sidebar( array(
+		'name' => __( 'Footer Area Three', 'heisenberg' ),
+		'id' => 'sidebar-3',
+		'description' => __( 'An optional widget area for your site footer', 'heisenberg' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'heisenberg_widgets_init' );

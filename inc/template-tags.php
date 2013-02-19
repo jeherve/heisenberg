@@ -207,3 +207,36 @@ function heisenberg_custom_excerpt_more( $output ) {
 	return $output;
 }
 add_filter( 'get_the_excerpt', 'heisenberg_custom_excerpt_more' );
+
+/**
+ * Count the number of footer sidebars to enable dynamic classes for the footer
+ */
+function heisenberg_footer_sidebar_class() {
+	$count = 0;
+
+	if ( is_active_sidebar( 'sidebar-1' ) )
+		$count++;
+
+	if ( is_active_sidebar( 'sidebar-2' ) )
+		$count++;
+
+	if ( is_active_sidebar( 'sidebar-3' ) )
+		$count++;
+
+	$class = '';
+
+	switch ( $count ) {
+		case '1':
+			$class = 'one';
+			break;
+		case '2':
+			$class = 'two';
+			break;
+		case '3':
+			$class = 'three';
+			break;
+	}
+
+	if ( $class )
+		echo 'class="' . $class . '"';
+}

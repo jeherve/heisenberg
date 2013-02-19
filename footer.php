@@ -10,8 +10,11 @@
 ?>
 
 	</div><!-- #main .site-main -->
-
+	
 	<footer id="colophon" class="site-footer" role="contentinfo">
+	
+		<?php get_sidebar(); ?>
+	
 		<div class="site-info">
 			<?php do_action( 'heisenberg_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'heisenberg' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'heisenberg' ), 'WordPress' ); ?></a>

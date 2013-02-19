@@ -5,30 +5,30 @@
  * @package Heisenberg
  * @since Heisenberg 1.0
  */
+// Check if the footer widget areas are populated
+if (   ! is_active_sidebar( 'sidebar-1'  )
+	&& ! is_active_sidebar( 'sidebar-2' )
+	&& ! is_active_sidebar( 'sidebar-3'  )
+)
+	return;
 ?>
-		<div id="secondary" class="widget-area" role="complementary">
-			<?php do_action( 'before_sidebar' ); ?>
-			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+<div id="secondary" <?php heisenberg_footer_sidebar_class(); ?>>
+<?php do_action( 'before_sidebar' ); ?>
+	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+	<div id="first" class="widget-area" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	</div><!-- #first .widget-area -->
+	<?php endif; ?>
 
-				<aside id="search" class="widget widget_search">
-					<?php get_search_form(); ?>
-				</aside>
+	<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+	<div id="second" class="widget-area" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-2' ); ?>
+	</div><!-- #second .widget-area -->
+	<?php endif; ?>
 
-				<aside id="archives" class="widget">
-					<h1 class="widget-title"><?php _e( 'Archives', 'heisenberg' ); ?></h1>
-					<ul>
-						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
-					</ul>
-				</aside>
-
-				<aside id="meta" class="widget">
-					<h1 class="widget-title"><?php _e( 'Meta', 'heisenberg' ); ?></h1>
-					<ul>
-						<?php wp_register(); ?>
-						<li><?php wp_loginout(); ?></li>
-						<?php wp_meta(); ?>
-					</ul>
-				</aside>
-
-			<?php endif; // end sidebar widget area ?>
-		</div><!-- #secondary .widget-area -->
+	<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+	<div id="third" class="widget-area" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-3' ); ?>
+	</div><!-- #third .widget-area -->
+	<?php endif; ?>
+</div><!-- #secondary -->
