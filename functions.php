@@ -96,7 +96,7 @@ add_action( 'after_setup_theme', 'heisenberg_setup' );
  */
 function heisenberg_register_custom_background() {
 	$args = array(
-		'default-color' => 'ffffff',
+		'default-color' => 'FDFFD7',
 		'default-image' => '',
 	);
 
