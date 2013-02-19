@@ -13,7 +13,7 @@
 			<?php if ( has_post_thumbnail() ) :
 				the_post_thumbnail();
 			else : ?>
-				<img src="<?php bloginfo( 'template_directory' ); ?>/img/default-thumb.png" />
+				<img src="<?php echo get_template_directory_uri(); ?>/img/default-thumb.png" />
 			<?php endif; ?>
 		</div>
 		
