@@ -99,11 +99,18 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	background: #FDFFD7;
+	color: #272D01;
 	font-family: sans-serif;
 	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 1.5;
+	font-size: 1.8rem;
+	line-height: 1.7;
+}
+
+#page {
+    clear: both;
+    margin: 0 auto;
+    width: 760px;
 }
 
 /* Headings */
@@ -111,7 +118,7 @@ h1,h2,h3,h4,h5,h6 {
 	clear: both;
 }
 hr {
-	background-color: #ccc;
+	background-color: #272D01;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -153,7 +160,7 @@ address {
 	margin: 0 0 1.5em;
 }
 pre {
-	background: #eee;
+	background: #F1DBC4;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 1.5rem;
@@ -167,11 +174,11 @@ code, kbd, tt, var {
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 abbr, acronym {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted #272D01;
 	cursor: help;
 }
 mark, ins {
-	background: #fff9c0;
+	background: #F1DBC4;
 	text-decoration: none;
 }
 sup,
@@ -222,8 +229,8 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid #ccc;
-	border-color: #ccc #ccc #bbb #ccc;
+	border: 1px solid #272D01;
+	border-color: #272D01 #272D01 #1c2100 #272D01;
 	border-radius: 3px;
 	background: #e6e6e6;
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
@@ -242,7 +249,7 @@ button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa #bbb;
+	border-color: #272D01 #1c2100 #131500 #1c2100;
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
 	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
 	box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
@@ -255,7 +262,7 @@ button:active,
 html input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb #bbb;
+	border-color: #131500 #1c2100 #1c2100 #1c2100;
 	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
 	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
 	box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
@@ -283,15 +290,15 @@ input[type=text],
 input[type=email],
 input[type=password],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	color: #272D01;
+	border: 1px solid #272D01;
 	border-radius: 3px;
 }
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=password]:focus,
 textarea:focus {
-	color: #111;
+	color: #1c2100;
 }
 input[type=text],
 input[type=email],
@@ -307,15 +314,13 @@ textarea {
 
 /* Links */
 a {
-	color: royalblue;
-}
-a:visited {
-	color: purple;
+	color: #069C79;
 }
 a:hover,
 a:focus,
-a:active {
-	color: midnightblue;
+a:active,
+a:visited {
+	color: #B6CA73;
 }
 
 /* Alignment */
@@ -340,6 +345,17 @@ a:active {
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
+}
+
+/* =Header
+----------------------------------------------- */
+
+#masthead {
+    float: left;
+    margin: 20px 0 100px;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
 
@@ -442,6 +458,15 @@ a:active {
 .archive .format-aside .entry-title {
 	display: none;
 }
+
+
+/* =Footer
+----------------------------------------------- */
+
+footer#colophon {
+	margin: 25px 0;
+    text-align: center;
+}    
 
 
 /* =Media
