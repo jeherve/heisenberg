@@ -12,7 +12,7 @@
  * @since Heisenberg 1.0
  */
 if ( ! isset( $content_width ) )
-	$content_width = 640; /* pixels */
+	$content_width = 760; /* pixels */
 
 /*
  * Load Jetpack compatibility file.
