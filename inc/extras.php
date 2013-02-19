@@ -54,7 +54,7 @@ add_filter( 'attachment_link', 'heisenberg_enhanced_image_navigation', 10, 2 );
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  *
- * @since Heisenberg 1.1
+ * @since Heisenberg 1.0
  */
 function heisenberg_wp_title( $title, $sep ) {
 	global $page, $paged;
