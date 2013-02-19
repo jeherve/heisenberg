@@ -11,7 +11,7 @@
 			<?php if ( has_post_thumbnail() ) :
 				the_post_thumbnail();
 			else : ?>
-				<img src="<?php bloginfo( 'template_directory' ); ?>/img/default-thumb-2.png" />
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/default-thumb.png" />
 			<?php endif; ?>
 		</div>
 		
