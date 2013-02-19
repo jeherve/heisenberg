@@ -63,11 +63,10 @@ function heisenberg_setup() {
 	 * Enable support for Post Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	
 	set_post_thumbnail_size( 760, 9999 ); // 760px high, the height doesn't matter
 
 	/**
-	 * This theme uses wp_nav_menu() in one location.
+	 * This theme uses wp_nav_menu() in two locations.
 	 */
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'heisenberg' ),
