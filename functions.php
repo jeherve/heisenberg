@@ -71,6 +71,7 @@ function heisenberg_setup() {
 	 */
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'heisenberg' ),
+		'footer' => __( 'Footer Menu', 'heisenberg' ),
 	) );
 
 	/**

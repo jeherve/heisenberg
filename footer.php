@@ -12,6 +12,11 @@
 	</div><!-- #main .site-main -->
 	
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<nav role="navigation" class="site-navigation main-navigation">
+			<h1 class="assistive-text"><?php _e( 'Menu', 'heisenberg' ); ?></h1>
+
+			<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+		</nav><!-- .site-navigation .main-navigation -->
 	
 		<?php get_sidebar(); ?>
 	
