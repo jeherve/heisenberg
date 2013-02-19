@@ -36,7 +36,7 @@
 			?>
 			<span class="sep"> | </span>
 			<span class="cat-links">
-				<?php printf( __( 'in %1$s', 'heisenberg' ), $categories_list ); ?>
+				<?php printf( __( 'In %1$s', 'heisenberg' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 
