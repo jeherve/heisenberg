@@ -77,7 +77,7 @@ function heisenberg_setup() {
 	/**
 	 * Enable support for Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'link' ) );
 }
 endif; // heisenberg_setup
 add_action( 'after_setup_theme', 'heisenberg_setup' );

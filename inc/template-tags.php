@@ -239,4 +239,20 @@ function heisenberg_footer_sidebar_class() {
 
 	if ( $class )
 		echo 'class="' . $class . '"';
+}}
+
+if ( ! function_exists( 'heisenberg_get_first_url' ) ) :
+/**
+ * Return the URL for the first link in the post content or the permalink if no
+ * URL is found.
+ *
+ *
+ * @since Heisenberg 1.0
+ */
+function heisenberg_get_first_url() {
+	$has_url = preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', get_the_content(), $match );
+	$link    = ( $has_url ) ? $match[1] : apply_filters( 'the_permalink', get_permalink() );
+
+	return esc_url_raw( $link );
 }
+endif;
