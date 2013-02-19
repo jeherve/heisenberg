@@ -133,6 +133,11 @@ add_action( 'widgets_init', 'heisenberg_widgets_init' );
 function heisenberg_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	
+	wp_register_script( 'stellar', get_template_directory_uri() . '/js/stellar.js', array( 'jquery' ) );
+	wp_enqueue_script( 'stellar' );
+	wp_register_script( 'init-stellar', get_template_directory_uri() . '/js/init-stellar.js', array( 'stellar' ) );
+	wp_enqueue_script( 'init-stellar' );
+	
 	$protocol = is_ssl() ? 'https' : 'http';
 	wp_enqueue_style( 'googlefonts', "$protocol://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Merriweather:400,300,700" );
 
