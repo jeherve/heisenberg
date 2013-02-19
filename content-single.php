@@ -7,6 +7,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<div class="entry-image">
+			<?php if ( has_post_thumbnail() ) :
+				the_post_thumbnail();
+			else : ?>
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/default-thumb-2.png" />
+			<?php endif; ?>
+		</div>
+		
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
