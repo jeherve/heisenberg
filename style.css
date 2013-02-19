@@ -624,3 +624,24 @@ object {
 .infinity-end.neverending #colophon {
 	display: block;
 }
+
+/* =Extra fonts
+----------------------------------------------- */
+
+/**
+ * Genericons, a flexible icon-font.
+ * License: GPL version 2 or any later version with font exception (http://www.gnu.org/licenses/gpl-faq.html#FontException)
+ * See also LICENSE.txt and COPYING.txt in the ./fonts directory.
+ * Thanks to FontSquirrel for web-font conversion!
+ * More info: genericons.com
+ */
+@font-face {
+	font-family: 'Genericons';
+	src: url('fonts/genericons-regular-webfont.eot');
+	src: url('fonts/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/genericons-regular-webfont.woff') format('woff'),
+		 url('fonts/genericons-regular-webfont.ttf') format('truetype'),
+		 url('fonts/genericons-regular-webfont.svg#genericonsregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
