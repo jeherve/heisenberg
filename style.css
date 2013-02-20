@@ -406,7 +406,9 @@ a:visited {
     left: 20px;
     position: absolute;
 }
-.error404 .entry-header h1 {
+.error404 .entry-header h1,
+.search .page-header h1,
+.search-no-results .entry-header h1 {
 	bottom: 0;
 	color: #272D01;
 	left: 0;
@@ -712,8 +714,6 @@ p.comment-form-comment {
 	display: none;
 }
 
-
-
 /* =Media
 ----------------------------------------------- */
 
@@ -944,29 +944,10 @@ object {
 .comments-link a:before,
 .tags-links:before,
 blockquote:before,
-.entry-content ul li:before,
-.menu-toggle:after,
-.featured-post:before,
-.date a:before,
-.entry-meta .author a:before,
-.format-audio .entry-content:before,
-.comments-link a:before,
-.tags-links a:first-child:before,
-.categories-links a:first-child:before,
-.edit-link a:before,
-.attachment .entry-title:before,
-.attachment-meta:before,
-.attachment-meta a:before,
-.comment-awaiting-moderation:before,
-.comment-reply-link:before,
-#reply-title small a:before,
-.bypostauthor .fn:before,
-.error404 .page-title:before {
+.entry-content ul li:before {
 	-webkit-font-smoothing: antialiased;
 	font: normal 30px/1 'Genericons';
 	position: relative;
-	/*vertical-align: text-bottom;
-	top: -1px; */
 }
 
 .sticky .entry-title a:before {
