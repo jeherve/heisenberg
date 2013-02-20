@@ -17,7 +17,14 @@ jQuery(document).ready(function($) {
               	}
               );
           else
-              jQuery('#masthead').stop().animate({'opacity':'1'},200);
+              jQuery('#masthead').stop().animate({
+              		'opacity':'1'
+              	},
+              	200,
+              	function() {
+              		$(this).css('visibility', 'visible');
+              	}
+              );
       });
    
       jQuery('.title').hover(
