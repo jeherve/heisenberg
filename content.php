@@ -7,7 +7,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<div class="entry-image" data-stellar-offset-parent="true">
+		<div class="entry-image">
 			<?php if ( has_post_thumbnail() ) :
 				$feat = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-thumbnail' ); ?>
 				<img src="<?php echo $feat['0']; ?>" data-stellar-ratio="0.5" />
