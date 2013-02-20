@@ -10,9 +10,9 @@
 		<div class="entry-image">
 			<?php if ( has_post_thumbnail() ) :
 				$feat = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-thumbnail' ); ?>
-				<img src="<?php echo $feat['0']; ?>" data-stellar-ratio="0.5" />
+				<img src="<?php echo $feat['0']; ?>" />
 			<?php else : ?>
-				<img src="<?php echo get_template_directory_uri(); ?>/img/default-thumb.png" data-stellar-ratio="0.5" />
+				<img src="<?php echo get_template_directory_uri(); ?>/img/default-thumb.png" />
 			<?php endif; ?>
 		</div>
 		
