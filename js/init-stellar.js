@@ -8,7 +8,14 @@ jQuery(document).ready(function($) {
 	jQuery(window).scroll(function(){
           var scrollTop = jQuery(window).scrollTop();
           if(scrollTop != 0)
-              jQuery('#masthead').stop().animate({'opacity':'0'},200);
+              jQuery('#masthead').stop().animate({
+              		'opacity':'0'
+              	},
+              	200,
+              	function() {
+              		$(this).css('visibility', 'hidden');
+              	}
+              );
           else
               jQuery('#masthead').stop().animate({'opacity':'1'},200);
       });
