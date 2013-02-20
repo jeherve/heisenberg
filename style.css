@@ -406,6 +406,13 @@ a:visited {
     left: 20px;
     position: absolute;
 }
+.error404 .entry-header h1 {
+	bottom: 0;
+	color: #272D01;
+	left: 0;
+	position: relative;
+	text-shadow: none;
+}
 .entry-header h1, .entry-header h1 a {
 	color: #fff;
 	text-shadow: 0px 0px 10px #000;
