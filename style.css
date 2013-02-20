@@ -930,7 +930,7 @@ object {
 }
 
 .genericon:before,
-.sticky .entry-title a:before,
+.sticky .entry-header .entry-title a:before,
 .format-standard .entry-title a:before,
 .format-link .entry-title a:before,
 .format-image .entry-title a:before,
@@ -950,7 +950,7 @@ blockquote:before,
 	position: relative;
 }
 
-.sticky .entry-title a:before {
+.sticky .entry-header .entry-title a:before {
 	content: '\f408';
 	vertical-align: text-top;
 }
