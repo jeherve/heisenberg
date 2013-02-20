@@ -28,7 +28,8 @@ get_header(); ?>
 				<?php get_template_part( 'no-results', 'search' ); ?>
 
 			<?php endif; ?>
-
+			
+				</div>
 			</div><!-- #content .site-content -->
 		</section><!-- #primary .content-area -->
 
